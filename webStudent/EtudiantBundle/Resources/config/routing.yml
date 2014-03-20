@@ -49,7 +49,9 @@ test2Action:
 test3Action:
     path: /test3/
     defaults: { _controller: webStudentEtudiantBundle:Etudiant:test3}
-
+Stage_ajouter:
+    path:      /ajouterStage
+    defaults:  { _controller:webStudentEtudiantBundle:Etudiant:ajouterStage }
 # Entreprises_consulter_tous:
 #     pattern:  /entreprise/consulterEntreprises/
 #     defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterLesEntreprises }
