@@ -52,7 +52,9 @@ test3Action:
 ajouterEtudiantFormulaire:
     path: /Etudiant/ajouterEtudiantFormulaire
     defaults: {_controller: webStudentEtudiantBundle:Etudiant:ajouterEtudiantFormulaire}
-
+Stage_ajouter:
+    path:      /ajouterStage
+    defaults:  { _controller:webStudentEtudiantBundle:Etudiant:ajouterStage }
 # Entreprises_consulter_tous:
 #     pattern:  /entreprise/consulterEntreprises/
 #     defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterLesEntreprises }
