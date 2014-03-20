@@ -49,6 +49,9 @@ test2Action:
 test3Action:
     path: /test3/
     defaults: { _controller: webStudentEtudiantBundle:Etudiant:test3}
+ajouterEtudiantFormulaire:
+    path: /Etudiant/ajouterEtudiantFormulaire
+    defaults: {_controller: webStudentEtudiantBundle:Etudiant:ajouterEtudiantFormulaire}
 
 # Entreprises_consulter_tous:
 #     pattern:  /entreprise/consulterEntreprises/
