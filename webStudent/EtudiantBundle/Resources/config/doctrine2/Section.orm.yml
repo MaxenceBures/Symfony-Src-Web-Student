@@ -1,0 +1,17 @@
+webStudent\EtudiantBundle\Entity\Section:
+    type: entity
+    table: null
+    repositoryClass: webStudent\EtudiantBundle\Entity\SectionRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        code:
+            type: string
+            length: '8'
+        nom:
+            type: string
+            length: '80'
+    lifecycleCallbacks: {  }

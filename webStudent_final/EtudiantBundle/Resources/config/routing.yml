@@ -1,0 +1,51 @@
+SalutEverybody:
+    path:  /affichSalut
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:index }
+webStudent_etudiant_homepage:
+    pattern:  /salut/{name}
+    defaults: { _controller: webStudentEtudiantBundle:Default:index }
+consulter2:
+    path:  /Etudiant/consulter
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulter2 }
+modifier2:
+    path:  /Etudiant/modifier/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:modifier2 }
+Test:
+    path:  /Etudiant/test
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:Test }
+AjouterEtudiant:
+    path: /Etudiant/ajouter
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:ajouter }
+AjouterSection:
+    path: /Etudiant/ajouterSection
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:ajouterSection }
+consulterSectionAction:
+    path: /Etudiant/consulterSection/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterSection }
+consulterEtudiantAction:
+    path: /Etudiant/consulterEtudiant/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterEtudiant}
+consulterEtudiant2Action:
+    path: /Etudiant/consulterEtudiant2/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterEtudiant2}
+listeAction:
+    path: /Etudiant/Liste/
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:liste}
+consulterStageAction:
+    path: /Etudiant/consulterStage/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterStage}
+ListeStageAction:
+    path: /Etudiant/consulterListeStage/
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:listeStage}
+test2Action:
+    path: /test/
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:test2}
+Entreprises_consulter_tous:
+    pattern:  /entreprise/consulterEntreprises/
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterLesEntreprises }
+Entreprise_afficher:
+    path: /entreprise/consulterEntreprise/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Stage:consulterEntreprise}
+Entreprise_rechercher:
+    path: /entreprise/rechercherEntreprise/{nom}
+    defaults: { _controller: webStudentEtudiantBundle:Stage:rechercherEntreprise }

@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+	{% block body %}
+		<h1>Afficher les étudiants</h1>
+		<p>
+			Tableau des étudiants
+		</p>
+		<table border=1>
+		{% for etudiant in listeEtudiant %}
+			<tr>
+			
+				<td>{{ etudiant.nom }} - {{ etudiant.prenom }}</td><td><a href="{{ path('consulterEtudiant2Action', {'id': etudiant.code})}}"> En voir plus</a></td>
+				
+			</tr>
+		{% endfor %}
+		</table>
+	{% endblock %}

@@ -1,0 +1,9 @@
+Salut:
+    path:  /Stage/saluta
+    defaults: { _controller: webStudentStageBundle:Stage:index }
+Consulter:
+    path:  /Stage/Consulter
+    defaults: { _controller: webStudentStageBundle:Stage:Consulter }
+Modifier:
+    path:  /Stage/Modifier
+    defaults: { _controller: webStudentStageBundle:Stage:Modifier }

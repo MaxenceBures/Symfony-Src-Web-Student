@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+	{% block body %}
+		<h1>Afficher les stages</h1>
+		<p>
+			Tableau des Stage
+		</p>
+		<table >
+		{% for stage in listeStage %}
+			<tr><!--.RaisonSociale-->
+			
+				<td>{{ stage.id }}  - {{ stage.activite }} - {{stage.dateDebut|date("d/m/Y")}} - {{stage.dateDebut|date("d/m/Y")}}</td><td><a href="{{ path('consulterStageAction', {'id': stage.id})}}"> En voir plus</a></td>
+				
+			</tr>
+		{% endfor %}
+		</table>
+	{% endblock %}

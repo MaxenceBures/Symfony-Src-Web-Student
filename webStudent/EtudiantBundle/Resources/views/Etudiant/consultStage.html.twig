@@ -1,0 +1,28 @@
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+
+	{% block body %}
+  <h1>Stage  </h1>
+  <table cellspacing="0">
+ 	<tr>
+ 		<th>Nom </th>
+ 		<td> {{stage.id}}</td>
+ 	</tr> </h1>
+ 	<tr>
+ 		<th>Date de debut </th>
+ 		<td> {{stage.Datedebut|date("d/m/Y")}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Date de fin </th>
+ 		<td> {{stage.Datefin|date("d/m/Y")}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Activite </th>
+ 		<td> {{stage.activite}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Entreprise </th>
+ 		<td> {{stage.entreprise.RaisonSociale}}</td>
+ 	</tr>
+ 	
+ </table>
+ {% endblock %}

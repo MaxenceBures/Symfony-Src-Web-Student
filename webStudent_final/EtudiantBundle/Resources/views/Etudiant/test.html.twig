@@ -1,0 +1,12 @@
+{# src/webStudent/EtudiantBundle/Resources/views/layout.html.twig #}
+{% extends "::layout.html.twig" %}
+ {% block body %}
+ <h1>Accueil </h1>
+<ul>
+			
+				<li><a href="{{ path('listeAction')}}"> Liste Utilisateur</a></li>
+				
+			
+				<li><a href="{{ path('ListeStageAction')}}"> Liste Stage</a></li>
+</ul>				
+        {% endblock %}

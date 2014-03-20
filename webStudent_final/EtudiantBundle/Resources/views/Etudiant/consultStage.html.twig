@@ -1,0 +1,33 @@
+{# src/tapadestage/EtudiantBundle/Resources/views/Etudiant/index.html.twig #}
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Bienvenue sur votre première page créée avec Symfony !</title>
+ </head>
+ <body>
+ <h1>Stage  </h1>
+  <table border=1>
+ 	<tr>
+ 		<td>Nom </td>
+ 		<td> {{id}}</td>
+ 	</tr> </h1>
+ 	<tr>
+ 		<td>Date de debut </td>
+ 		<td> {{debut|date("d/m/Y")}}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Date de fin </td>
+ 		<td> {{fin|date("d/m/Y")}}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Activite </td>
+ 		<td> {{activite}}</td>
+ 	</tr>
+ 	<tr>
+ 		<td>Entreprise </td>
+ 		<td> {{entreprise}}</td>
+ 	</tr>
+ 	
+ </table
+ </body>
+</html>

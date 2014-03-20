@@ -1,0 +1,26 @@
+webStudent\EtudiantBundle\Entity\Utilisateur:
+    type: entity
+    table: null
+    repositoryClass: webStudent\EtudiantBundle\Entity\UtilisateurRepository
+    fields:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+        code:
+            type: string
+            length: '10'
+        nom:
+            type: string
+            length: '50'
+        prenom:
+            type: string
+            length: '50'
+        adressemail:
+            type: string
+            length: '80'
+        telephone:
+            type: string
+            length: '12'
+    lifecycleCallbacks: {  }

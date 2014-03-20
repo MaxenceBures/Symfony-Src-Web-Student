@@ -1,0 +1,25 @@
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+
+	{% block body %}
+	
+ <h1>Etudiant  </h1>
+ <table cellspacing="0">
+ 	<tr>
+ 		<th>Nom </th>
+ 		<td> {{id}}</td>
+ 	</tr> </h1>
+ 	<tr>
+ 		<th>Prenom </th>
+ 		<td> {{prenom}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Mail </th>
+ 		<td> {{mail}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Telephone </th>
+ 		<td> {{telephone}}</td>
+ 	</tr>
+ 	
+ </table>
+{% endblock %}

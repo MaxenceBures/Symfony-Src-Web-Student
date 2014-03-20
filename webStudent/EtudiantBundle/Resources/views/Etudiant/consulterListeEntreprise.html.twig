@@ -1,0 +1,38 @@
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+
+	{% block body %}
+	
+	
+		<h1>Afficher les entreprises</h1>
+		<p>
+			Tableau des Entreprises
+		</p>
+		<table cellspacing='0'>
+		
+		<tr>
+		<th>Id</th>
+		<!--<th>Code</th>-->
+		<th>Raison Sociale</th>
+		<th>Rue</th>
+		<th>Ville</th>
+		<th>Code Postal</th>
+		<th></th>
+		</tr>
+		
+	
+		{% for entreprise in listeEntreprise %}
+			<tr><!--.RaisonSociale-->
+			
+				<td>{{ entreprise.id }}</td>
+				<!--<td>{{ entreprise.code }}</td>-->
+				<td>{{entreprise.raisonsociale}}</td>
+				<td>{{entreprise.rue}}</td>
+				<td>{{entreprise.ville}}</td>
+				<td>{{entreprise.cp}}</td>
+				<td><a href="{{ path('consulterEntrepriseAction', {'id': entreprise.id})}}"> En voir plus</a></td>
+				
+			</tr>
+		{% endfor %}
+		
+		</table>
+	 {% endblock %}

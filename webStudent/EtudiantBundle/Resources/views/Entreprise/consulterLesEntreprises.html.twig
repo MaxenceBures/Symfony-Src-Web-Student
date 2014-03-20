@@ -1,0 +1,32 @@
+{% extends '::base.html.twig' %}
+{% block title %} Liste des entreprises enregistrées {% endblock %}
+
+{% block body %}
+
+<h1> Voici la liste des entreprises enregistrées </h1>
+
+<table border = 1>
+	<tr>
+		<th>Nom</th>
+		<th>Activité</th>
+		<th>Numero rue</th>
+		<th>Nom rue</th>
+		<th>Code Postal</th>
+		<th>Ville</th>
+		<th>Telephone</th>
+		<th>Mail</th>
+	</tr>
+	{% for entreprise in listeEntreprises %}
+	<tr>
+	    <td><a href="{{ path('Entreprise_afficher', { 'id': entreprise.id }) }}"> {{ entreprise.nom }} </a></td>
+		<td>{{ entreprise.activite }}</td>
+		<td>{{ entreprise.numeroRue }}</td>
+		<td>{{ entreprise.nomRue }}</td>
+		<td>{{ entreprise.codePostal }}</td>
+		<td>{{ entreprise.ville }}</td>
+		<td>{{ entreprise.numeroTel }}</td>
+		<td>{{ entreprise.adresseMail }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}

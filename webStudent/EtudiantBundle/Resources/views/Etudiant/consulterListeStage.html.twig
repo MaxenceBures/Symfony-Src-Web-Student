@@ -1,0 +1,29 @@
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+
+	{% block body %}
+	{% block test %} {{ parent() }} {% endblock %}
+		<h1>Afficher les stages</h1>
+		<p>
+			Tableau des Stage
+		</p>
+		<table cellspacing="0">
+			<tr>
+				<th>Id</th>
+				<th>Activite</th>
+				<th>Date Debut</th>
+				<th>Date Fin</th>
+				<th></th>
+			</tr>
+		{% for stage in listeStage %}
+			<tr><!--.RaisonSociale-->
+			
+				<td>{{ stage.id }} </td>
+				<td>{{ stage.activite }}</td> 
+				<td>{{stage.dateDebut|date("d/m/Y")}}</td>
+				<td>{{stage.dateFin|date("d/m/Y")}}</td>
+				<td><a href="{{ path('consulterStageAction', {'id': stage.id})}}"> En voir plus</a></td>
+				
+			</tr>
+		{% endfor %}
+		</table>
+	{% endblock %}

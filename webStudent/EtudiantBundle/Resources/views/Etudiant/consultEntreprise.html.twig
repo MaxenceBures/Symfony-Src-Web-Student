@@ -1,0 +1,29 @@
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+
+	{% block body %}
+	
+ <h1 >Entreprise  </h1>
+  <table cellspacing="0" >
+ 	<tr>
+ 		<th>Code </th>
+ 		<td> {{id}}</td>
+ 	</tr> </h1>
+ 	<tr>
+ 		<th>Raison Sociale </th>
+ 		<td> {{raisonsociale}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Rue </th>
+ 		<td> {{rue}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Ville</th>
+ 		<td> {{ville}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Code Postal </th>
+ 		<td> {{cp}}</td>
+ 	</tr>
+ 	
+ </table>
+ {% endblock %}
