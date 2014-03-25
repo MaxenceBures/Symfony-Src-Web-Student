@@ -1,0 +1,55 @@
+{# src/webStudent/EtudiantBundle/Resources/views/Etudiant/ajouterEtudiant.html.twig #}
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+	
+	{% block body %}
+
+	
+	<div class="span6">
+		<h2>Ajouter un Etudiant</h2>
+		
+		<form class="form-inline" method="post" {{ form_enctype(form) }}>
+		<!-- {{ form_errors(form) }} -->
+			<table class="table table-striped">
+				
+				<tr>
+					<th>Nom</th>
+					{{ form_errors(form.nom) }}
+					<td>{{ form_widget(form.nom, {'attr': {'placeholder': 'Nom'} }) }}</td>
+				</tr>
+				<tr>
+					<th>Prenom</th>
+					{{ form_errors(form.prenom) }}
+					<td>{{ form_widget(form.prenom, {'attr': {'placeholder': 'Prenom'} }) }}</td>
+				</tr>
+				<tr>
+					<th>AdresseMail</th>
+					{{ form_errors(form.adressemail) }}
+					<td>{{ form_widget(form.adressemail, {'attr': {'placeholder': 'Adresse mail'} }) }}</td>
+				</tr>
+				<tr>
+					<th>Telephone</th>
+					{{ form_errors(form.telephone) }}
+					<td>{{ form_widget(form.telephone, {'attr': {'placeholder': 'Telephone'} }) }}</td>
+				</tr>
+				<tr>
+					<th>DateInscription</th>
+					{{ form_errors(form.date) }}
+					<td>{{ form_widget(form.date, {'attr': {'placeholder': 'entreprise'} }) }}</td>
+				</tr>
+				<tr>
+					<th>Section</th>
+					{{ form_errors(form.section) }}
+					<td>{{ form_widget(form.section, {'attr': {'placeholder': 'entreprise'} }) }}</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:center;"><input type="submit" class="btn btn-success" value="Valider"/>
+					<input type="reset" class="btn btn-warning" value="Annuler"/></td>
+				</tr>
+			</table>
+			{{ form_rest(form) }}			 
+		</form>
+	</div>
+
+	
+
+	{% endblock %}

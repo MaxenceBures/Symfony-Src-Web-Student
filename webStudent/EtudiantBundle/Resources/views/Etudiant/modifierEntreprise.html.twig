@@ -1,0 +1,41 @@
+{% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
+	{% block body %}
+
+	
+
+	<div class="span6">
+		<h2>Modifier une Entreprise</h2>
+		
+		<form class="form-inline" method="post" {{ form_enctype(form) }}>
+		{{ form_errors(form) }}
+			<table class="table table-striped">
+			
+				<tr>
+					<th>Raison Sociale</th>
+					<td>{{ form_widget(form.raisonSociale, {'attr': {'placeholder': 'Raison Sociale'} }) }}</td>
+				</tr>	
+				<tr>
+					<th>Rue</th>
+					<td>{{ form_widget(form.rue, {'attr': {'placeholder': 'Rue'} }) }}</td>
+				</tr>
+				<tr>
+					<th>Ville</th>
+					<td>{{ form_widget(form.ville, {'attr': {'placeholder': 'Ville'} }) }}</td>
+				</tr>
+				<tr>
+					<th>Code Postal</th>
+					<td>{{ form_widget(form.cp, {'attr': {'placeholder': 'Ex : CodePostal'} }) }}</td>
+				</tr>
+				
+				<tr>
+					<td colspan="2" style="text-align:center;"><input type="submit"  value="Valider"/>
+					<input type="reset"  value="Annuler"/></td>
+				</tr>
+			</table>
+			{{ form_rest(form) }}			 
+		</form>
+		
+	</div>
+
+	
+	{% endblock %}

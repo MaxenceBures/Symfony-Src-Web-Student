@@ -3,6 +3,7 @@
 namespace webStudent\EtudiantBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
@@ -43,17 +44,18 @@ class Utilisateur
 
     
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="code", type="string", length=20)
-     */
-    private $code;
+   
 
     /**
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=60)
+     * @Assert\Length(
+     *      min = "1",
+     *      max = "60",
+     *      minMessage = "Votre nom doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre nom ne peut pas être plus long que {{ limit }} caractères"
+     * )
      */
     private $nom;
 
@@ -61,6 +63,12 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=60)
+     * @Assert\Length(
+     *      min = "1",
+     *      max = "60",
+     *      minMessage = "Votre prenom doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre prenom ne peut pas être plus long que {{ limit }} caractères"
+     * )
      */
     private $prenom;
 
@@ -68,6 +76,10 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="adressemail", type="string", length=60)
+     * @Assert\Email(
+     *     message = "'{{ value }}' n'est pas un email valide.",
+     *     checkMX = true
+     * )
      */
     private $adressemail;
 
@@ -75,6 +87,12 @@ class Utilisateur
      * @var string
      *
      * @ORM\Column(name="telephone", type="string", length=60)
+     * @Assert\Length(
+     *      min = "4",
+     *      max = "12",
+     *      minMessage = "Votre numero de telephone doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre numero de telephone ne peut pas être plus long que {{ limit }} caractères"
+     * )
      */
     private $telephone;
 
@@ -89,28 +107,7 @@ class Utilisateur
         return $this->id;
     }
 
-    /**
-     * Set code
-     *
-     * @param string $code
-     * @return Utilisateur
-     */
-    public function setCode($code)
-    {
-        $this->code = $code;
-    
-        return $this;
-    }
 
-    /**
-     * Get code
-     *
-     * @return string 
-     */
-    public function getCode()
-    {
-        return $this->code;
-    }
 
     /**
      * Set nom

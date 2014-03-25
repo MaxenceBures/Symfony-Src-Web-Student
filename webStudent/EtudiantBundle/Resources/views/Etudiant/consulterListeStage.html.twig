@@ -1,7 +1,7 @@
 {% extends "webStudentEtudiantBundle:Etudiant:layout.html.twig" %}
 
 	{% block body %}
-	{% block test %} {{ parent() }} {% endblock %}
+	
 		<h1>Afficher les stages</h1>
 		<p>
 			Tableau des Stage
@@ -26,4 +26,5 @@
 			</tr>
 		{% endfor %}
 		</table>
+	<a href="{{ path('AjouterStage')}}"> Ajouter Stage</a>	
 	{% endblock %}

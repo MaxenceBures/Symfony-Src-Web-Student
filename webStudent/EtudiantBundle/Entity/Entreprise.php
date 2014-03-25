@@ -3,7 +3,7 @@
 namespace webStudent\EtudiantBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Entreprise
  *
@@ -21,17 +21,18 @@ class Entreprise
      */
     private $id;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="code", type="string", length=8)
-     */
-    private $code;
+  
 
     /**
      * @var string
      *
      * @ORM\Column(name="RaisonSociale", type="string", length=80)
+     * @Assert\Length(
+     *      min = "2",
+     *      max = "80",
+     *      minMessage = "Votre raison sociale doit faire au moins {{ limit }} caractères",
+     *      maxMessage = "Votre raison sociale ne peut pas être plus long que {{ limit }} caractères"
+     * )
      */
     private $raisonSociale;
 
@@ -39,6 +40,10 @@ class Entreprise
      * @var string
      *
      * @ORM\Column(name="Rue", type="string", length=50)
+     * @Assert\Length(
+     *      max = "50",
+     *      maxMessage = "Votre rue ne peut pas être plus long que {{ limit }} caractères"
+     * )
      */
     private $rue;
 
@@ -46,13 +51,22 @@ class Entreprise
      * @var string
      *
      * @ORM\Column(name="Ville", type="string", length=50)
+     * @Assert\Length(
+     *      max = "50",
+     *      maxMessage = "Votre ville ne peut pas être plus long que {{ limit }} caractères"
+     * )
      */
     private $ville;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Cp", type="string", length=50)
+     * @ORM\Column(name="Cp", type="string", length=5)
+     * @Assert\Length(
+     *      min = "5",
+     *      max = "5",
+     *      exactMessage = "Votre Cp être egal à {{ limit }} caractères"
+     * )
      */
     private $cp;
 
@@ -67,28 +81,7 @@ class Entreprise
         return $this->id;
     }
 
-    /**
-     * Set code
-     *
-     * @param string $code
-     * @return Entreprise
-     */
-    public function setCode($code)
-    {
-        $this->code = $code;
     
-        return $this;
-    }
-
-    /**
-     * Get code
-     *
-     * @return string 
-     */
-    public function getCode()
-    {
-        return $this->code;
-    }
 
     /**
      * Set raisonSociale

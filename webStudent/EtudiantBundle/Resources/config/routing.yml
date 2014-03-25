@@ -4,27 +4,6 @@ SalutEverybody:
 webStudent_etudiant_homepage:
     pattern:  /salut/{name}
     defaults: { _controller: webStudentEtudiantBundle:Default:index }
-consulter2:
-    path:  /Etudiant/consulter
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulter2 }
-modifier2:
-    path:  /Etudiant/modifier/{id}
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:modifier2 }
-Test:
-    path:  /Etudiant/test
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:Test }
-AjouterEtudiant:
-    path: /Etudiant/ajouter
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:ajouter }
-AjouterSection:
-    path: /Etudiant/ajouterSection
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:ajouterSection }
-consulterSectionAction:
-    path: /Etudiant/consulterSection/{id}
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterSection }
-consulterEtudiantAction:
-    path: /Etudiant/consulterEtudiant/{id}
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterEtudiant}
 consulterEtudiant2Action:
     path: /Etudiant/consulterEtudiant2/{id}
     defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterEtudiant2}
@@ -43,24 +22,21 @@ consulterEntrepriseAction:
 ListeEntrepriseAction:
     path: /Etudiant/consulterListeEntreprise/
     defaults: { _controller: webStudentEtudiantBundle:Etudiant:listeEntreprise}
-test2Action:
+accueilAction:
     path: /Accueil/
-    defaults: { _controller: webStudentEtudiantBundle:Etudiant:test2}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:accueil}
 test3Action:
     path: /test3/
     defaults: { _controller: webStudentEtudiantBundle:Etudiant:test3}
-ajouterEtudiantFormulaire:
-    path: /Etudiant/ajouterEtudiantFormulaire
-    defaults: {_controller: webStudentEtudiantBundle:Etudiant:ajouterEtudiantFormulaire}
-Stage_ajouter:
-    path:      /ajouterStage
-    defaults:  { _controller:webStudentEtudiantBundle:Etudiant:ajouterStage }
-# Entreprises_consulter_tous:
-#     pattern:  /entreprise/consulterEntreprises/
-#     defaults: { _controller: webStudentEtudiantBundle:Etudiant:consulterLesEntreprises }
-# Entreprise_afficher:
-#     path: /entreprise/consulterEntreprise/{id}
-#     defaults: { _controller: webStudentEtudiantBundle:Stage:consulterEntreprise}
-# Entreprise_rechercher:
-#     path: /entreprise/rechercherEntreprise/{nom}
-#     defaults: { _controller: webStudentEtudiantBundle:Stage:rechercherEntreprise }
+AjouterStage:
+    path: /Etudiant/ajouterStage
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:ajouterStage}
+AjouterEntreprise:
+    path: /Etudiant/ajouterEntreprise
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:AjouterEntreprise}
+AjouterEtudiant2:
+    path: /Etudiant/ajouterEtudiant
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:AjouterEtudiant}
+ModifierEntreprise:
+    path: /Etudiant/modifEntreprise/{id}
+    defaults: { _controller: webStudentEtudiantBundle:Etudiant:modifierEntreprise}

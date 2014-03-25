@@ -27,7 +27,7 @@ class Etudiant extends Utilisateur
     /**
      * @var string
      *
-     * @ORM\Column(name="date", type="string", length=20)
+     * @ORM\Column(name="date", type="datetime")
      */
     private $date;
 
@@ -45,7 +45,7 @@ class Etudiant extends Utilisateur
     /**
      * Set date
      *
-     * @param string $date
+    * @param \DateTime $date
      * @return Etudiant
      */
     public function setDate($date)
@@ -58,7 +58,7 @@ class Etudiant extends Utilisateur
     /**
      * Get date
      *
-     * @return string 
+     * @return \DateTime 
      */
     public function getDate()
     {

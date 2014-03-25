@@ -4,21 +4,33 @@
 	
  <h1>Etudiant  </h1>
  <table cellspacing="0">
+ <tr>
+ 		<th>Id </th>
+ 		<td> {{etudiant.id}}</td>
+ 	</tr>
  	<tr>
  		<th>Nom </th>
- 		<td> {{id}}</td>
- 	</tr> </h1>
+ 		<td> {{etudiant.nom}}</td>
+ 	</tr>
  	<tr>
  		<th>Prenom </th>
- 		<td> {{prenom}}</td>
+ 		<td> {{etudiant.prenom}}</td>
  	</tr>
  	<tr>
  		<th>Mail </th>
- 		<td> {{mail}}</td>
+ 		<td> {{etudiant.adressemail}}</td>
  	</tr>
  	<tr>
  		<th>Telephone </th>
- 		<td> {{telephone}}</td>
+ 		<td> {{etudiant.telephone}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Date Inscription </th>
+ 		<td> {{etudiant.date|date("d/m/Y")}}</td>
+ 	</tr>
+ 	<tr>
+ 		<th>Section </th>
+ 		<td> {{etudiant.section.nom}}</td>
  	</tr>
  	
  </table>

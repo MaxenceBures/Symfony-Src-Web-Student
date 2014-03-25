@@ -6,7 +6,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class EtudiantType extends AbstractType
+class StageType extends AbstractType
 {
         /**
      * @param FormBuilderInterface $builder
@@ -15,14 +15,13 @@ class EtudiantType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nom','text')
-            ->add('prenom','text')
-            ->add('adressemail','text')
-            ->add('telephone','text')
-            ->add('date','date')
-            ->add('section','entity', array(
-                                        'class'    => 'webStudentEtudiantBundle:Section',
-                                        'property' => 'nom',
+            ->add('intitule','text')
+            ->add('dateDebut','date')
+            ->add('dateFin','date')
+            ->add('activite','text')
+            ->add('entreprise','entity', array(
+                                        'class'    => 'webStudentEtudiantBundle:Entreprise',
+                                        'property' => 'raisonSociale',
                                         'multiple' => false,
                                         'expanded' => false))
         ;
@@ -34,7 +33,7 @@ class EtudiantType extends AbstractType
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'webStudent\EtudiantBundle\Entity\Etudiant'
+            'data_class' => 'webStudent\EtudiantBundle\Entity\Stage'
         ));
     }
 
@@ -43,6 +42,6 @@ class EtudiantType extends AbstractType
      */
     public function getName()
     {
-        return 'webstudent_etudiantbundle_etudiant';
+        return 'webstudent_etudiantbundle_stage';
     }
 }
